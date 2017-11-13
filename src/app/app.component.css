@@ -1,0 +1,92 @@
+.nav-sidebar { 
+    width: 100%;
+    padding: 8px 0; 
+    border-right: 1px solid #ddd;
+}
+.nav-sidebar a {
+    color: #333;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+    -webkit-border-radius: 4px 0 0 4px; 
+    -moz-border-radius: 4px 0 0 4px; 
+    border-radius: 4px 0 0 4px; 
+}
+.nav-sidebar .active a { 
+    cursor: default;
+    background-color: #428bca; 
+    color: #fff; 
+    text-shadow: 1px 1px 1px #666; 
+}
+.nav-sidebar .active a:hover {
+    background-color: #428bca;   
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+}
+
+/*
+side bar category
+
+            <div class="col-sm-2">
+                <nav class="nav-sidebar">
+                    <ul class="nav">
+                        <li class="active"><a href="javascript:;">&nbsp;&nbsp;All Category&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="javascript:;">General Works</a></li>
+                        <li><a href="javascript:;">Philosophy, Psychology, Religion</a></li>
+                        <li><a href="javascript:;">Auxiliary Sciences of History</a></li><li>
+                            <a href="javascript:;">History: General and Old World</a></li>
+                        <li><a href="javascript:;">History: Western Hemisphere</a></li>
+                        <li><a href="javascript:;">Geography, Anthropology, Recreation</a></li>
+                        <li><a href="javascript:;"> Social Sciences</a></li>
+                        <li><a href="javascript:;">Political Science</a></li>
+                        <li><a href="javascript:;">Law</a></li>
+                        <li><a href="javascript:;"> Music    </a></li>
+                        <li><a href="javascript:;"> Education    </a></li>
+                        <li><a href="javascript:;"> Fine Arts   </a></li>
+                        <li><a href="javascript:;"> Language and Literature    </a></li>
+                        <li><a href="javascript:;">Slavic (Russian). Baltic. Albanian</a></li>
+                        <li><a href="javascript:;">Science</a></li>
+                        <li><a href="javascript:;">Medicine</a></li>
+                        <li><a href="javascript:;">Technology</a></li>
+                        <li><a href="javascript:;"> Bibliography: Library Science.</a></li>
+                        <li><a href="javascript:;"> Military Science</a></li>
+                       
+                    </ul>
+                </nav>
+            </div>
+
+
+Right-aligned sidebar */
+.nav-sidebar.pull-right { 
+    border-right: 0; 
+    border-left: 1px solid #ddd; 
+}
+.nav-sidebar.pull-right a {
+    -webkit-border-radius: 0 4px 4px 0; 
+    -moz-border-radius: 0 4px 4px 0; 
+    border-radius: 0 4px 4px 0; 
+}
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
