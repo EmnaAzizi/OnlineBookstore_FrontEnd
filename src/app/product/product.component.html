@@ -1,12 +1,149 @@
 
-<div class="container">
-	<div class="row">
-		<!-- BEGIN PRODUCTS -->
+<div class="side-menu">
 		
-  		<div class="col-md-3 col-sm-6">
+		  
+		  <nav  role="navigation">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+				  <div class="brand-wrapper">
+						  <br><br> <br>
+						  &nbsp;&nbsp;&nbsp;<a Style="font-size:40px;color:rgb(44, 44, 44)">MyLibrary.com</a>
+					  <div class="brand-name-wrapper">
+						  <br><br><br>
+						  {{change()}}
+							  <div class="dropdown">
+									  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;
+									  <button class="btn btn-primary dropdown-toggle" type="button" 
+									  data-toggle="dropdown" Style="background-color:rgb(103, 196, 100);font-size:20px;color:rgb(255, 255, 255)">Filter By Category 
+									  <span class="caret"></span></button>
+									  <ul class="dropdown-menu">
+										<li><a (click)='filter("")'>ALL</a></li>
+										<li><a (click)='filter("Romance")'>Romance</a></li>
+										<li><a (click)='filter("Thriller")'>Thriller</a></li>
+										<li><a (click)='filter("Fiction")'>Fiction</a></li>
+										<li><a (click)='filter("Science")'>Science</a></li>
+										<li><a (click)='filter("Litterature")'>Litterature</a></li>
+										
+									  </ul>
+									</div>
+					
+					  </div>
+		  
+				  </div>
+		  
+			  </div>
+		  
+			
+		  </nav>
+			  
+		  </div>
+	  
+<div class="container-fluid">
+<div class="side-body">
+		
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+	
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				
+			<span class="navbar-toggler-icon"></span>
+		  
+		</button>
+	
+		<button class="btn btn-default btn-lg btn-link" style="font-size:30px;color:grey" (click)="shop()" >
+			<span class="glyphicon  glyphicon-shopping-cart"></span>
+		  </button>
+		  <span class="badge badge-notify">{{cartnumber}}</span>
+	  
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+		   
+			<li>
+				
+				  
+			</li>
+		
+		  </ul>
+		  <div class="form-inline my-2 my-lg-0 pull-right" >
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]='listFilter'>
+				<button type="button" class="btn btn-default" (click)='filter(listFilter)'>
+					<span class="glyphicon glyphicon-search"></span> 
+				  </button> 
+				  <h4>&nbsp;{{welcome}} </h4>
+				  
+				   
+				  <ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a  class="dropdown-toggle" data-toggle="dropdown">
+								<a style="font-size:15px; color:rgb(56, 49, 49)">Sign Up
+										 
+								</a>
+						
+							</a>
+
+							<ul class="dropdown-menu">
+									
+								<li>
+										<app-adduser></app-adduser>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<div class="navbar-login navbar-login-session">
+										
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>OR </strong> &nbsp;
+
+					<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a  class="dropdown-toggle" data-toggle="dropdown">
+									<a style="font-size:15px; color:rgb(37, 36, 36)">
+											Sign In &nbsp;<img src={{img}} style="width:30px;height:30px;"> 
+									</a>
+									
+									<strong></strong>
+									
+								</a>
+	
+	
+								<ul class="dropdown-menu">
+										<app-signin></app-signin>
+										 
+									<li>
+									
+									</li>
+									<li class="divider"></li>
+									<li>
+										<div class="navbar-login navbar-login-session">
+											
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					 
+	
+			
+				</div>
+		</div>
+		
+	
+	  </nav>
+
+	  
+	  <router-outlet></router-outlet>
+	<div  *ngFor= 'let product of products ' >
+		<!-- BEGIN PRODUCTS  |CatgFilter:CatFilter| productFilter:listFilter-->
+		
+		
+  		<div class="col-md-3 col-sm-8">
     		<span class="thumbnail">
-          <img  (click)="myZoom()"src="https://decitre.di-static.com/img/475x500/daniel-keyes-des-fleurs-pour-algernon/9782290032725FS.gif" alt="..."width="200"height="250">
-      			<h4>Des fleurs pour Algernon</h4>
+		  <img  src={{product.imgUrl}} style="width:300px;height:350px;"  [routerLink]="['/product',product.idpr]">
+		  <!--app-zoomdetails [produit]='produitZoom'></app-zoomdetails -->
+				  <h4><a>{{product.productName}}</a></h4>
+				  
       			<div class="ratings">
                     <span class="glyphicon glyphicon-star"></span>
                     <span class="glyphicon glyphicon-star"></span>
@@ -14,20 +151,36 @@
                     <span class="glyphicon glyphicon-star"></span>
                     <span class="glyphicon glyphicon-star-empty"></span>
                 </div>
-      			<p>Algernon est une souris dont le traitement du Pr Nemur et du Dr Strauss vient de décupler l'intelligence </p>
+				  
+					  <h5>
+							<ng-template #popTemplate><img  src={{product.imageA}} style="max-width: 60%">
+							<br><br> <strong>{{product.descriptionA}}</strong>
+							</ng-template>
+							<a href="#" triggers="mouseenter:mouseleave"
+									[popover]="popTemplate" popoverTitle="{{product.authorname}}">
+									{{product.authorname}}
+					  </a>
+							
+						
+					  </h5>
+					<h6> ({{product.category}}) </h6>
+				
       			<hr class="line">
       			<div class="row">
       				<div class="col-md-6 col-sm-6">
-      					<p class="price">6,90€</p>
+      					<p class="price">{{product.price}}&nbsp;$</p>
       				</div>
       				<div class="col-md-6 col-sm-6">
-      					<button class="btn btn-success right" (click)="myLogin1()" ><span  class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Ajouter au Panier</button>
+      					<button class="btn btn-success right" (click)='check(product.idpr)' ><span  class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>  Add to Cart</button>
       				</div>
       				
       			</div>
     		</span>
   		</div>
   		
-  		<!-- END PRODUCTS -->
+  		<!-- [routerLink]="['/Authentification',product? product.idpr : null]" -->
 	</div>
+	
 </div>
+</div>
+<router-outlet></router-outlet>

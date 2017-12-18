@@ -1,3 +1,41 @@
+  
+  .side-menu {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #2e2e2e url(https://s3.amazonaws.com/magoosh-company-site/wp-content/uploads/sites/24/2017/06/01031536/shutterstock_159503864.jpg) right bottom no-repeat;
+    border-right: 1px solid #e7e7e7;
+    background-size: cover;
+    opacity:0.9
+  }
+  
+  .side-body {
+    margin-left: 310px;
+  }
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+.badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    left: -35px;
+   }
 h4{
     font-weight: 600;
 }
@@ -6,7 +44,7 @@ p{
     margin-top: 5px;
 }
 .price{
-    font-size: 30px;
+    font-size: 20px;
     margin: 0 auto;
     color: #333;
 }
@@ -14,8 +52,8 @@ p{
     float:right;
     border-bottom: 2px solid #4B8E4B;
 }
+
 .thumbnail{
-    opacity:1.00;
     -webkit-transition: all 0.5s; 
     transition: all 0.5s;
 }

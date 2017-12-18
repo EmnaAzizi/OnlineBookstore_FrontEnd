@@ -1,0 +1,75 @@
+<div style="text-align:center">
+        
+        <div class="form-group">
+          <label for="name" class="cols-sm-2 control-label">Your Name</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon glyphicon glyphicon-user"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" [(ngModel)]='name'/>
+            </div>
+          </div>
+        </div>
+       
+
+        <div class="form-group">
+          <label for="email" class="cols-sm-2 control-label">Your Email</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon glyphicon glyphicon-envelope" ><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+              <input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Email" data-error="That email address is invalid" [(ngModel)]='mail'/>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="username" class="cols-sm-2 control-label">Username</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon glyphicon glyphicon-user"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username" [(ngModel)]='username'/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="cols-sm-2 control-label">Password</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon glyphicon glyphicon-lock"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" [(ngModel)]='password'/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon glyphicon glyphicon-lock" ><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <input type="password" class="form-control"
+               name="confirm" id="confirm"  placeholder="Confirm your Password" [(ngModel)]='password1'/>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="confirm" class="cols-sm-2 control-label">Image </label>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon glyphicon glyphicon-lock" ><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <input type="text" class="form-control"
+               name="confirma" id="confirma"  placeholder="Paste your image URL" [(ngModel)]='image'/>
+            </div>
+          </div>
+        </div>
+        <li class="divider"></li>
+        <div class="form-group ">
+          <button type="button" class="btn btn-primary btn-lg btn-block login-button" (click)="adduser()">Register</button>
+        </div>
+        <li class="divider"></li>
+        
+        <div class="login-register">
+           
+             </div>
+            </div>
+            

@@ -1,0 +1,33 @@
+<li>
+    <div class="col-lg-4">
+        
+        <p class="text-center">
+          <img src={{img}} style="width:100px;height:100px;"> 
+        </p>
+      </div>        
+    </li>   
+         
+    
+      
+      <div class="col-lg-8">
+        <p class="text-left"><strong>Se Connecter</strong></p>
+        <p class="text-left small"></p>
+        <p class="text-left">
+           Login : <input type="text"[(ngModel)]='log'> <br>
+           Password : <input type="password" [(ngModel)]='pass'>
+          <br> <br>
+          <a class="btn btn-primary btn-block btn-sm" (click)='signin(log,pass)'><i class="glyphicon glyphicon-off" ></i>Sign In</a>
+        </p>
+     
+        <li class="divider"></li>
+        <li>
+          
+            
+                <p>
+                  <a class="btn btn-danger btn-block" (click)='signout()'>Sign Out</a>
+                </p>
+             
+            
+          
+        </li>
+      
